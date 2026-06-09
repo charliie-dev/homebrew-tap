@@ -5,15 +5,21 @@ Personal Homebrew tap maintained by [charliie-dev](https://github.com/charliie-d
 ## Install
 
 ```sh
-brew install --cask charliie-dev/tap/airbattery
-```
-
-Or tap this repository first:
-
-```sh
 brew tap charliie-dev/tap
+brew trust charliie-dev/tap
 brew install --cask airbattery
 ```
+
+> [!IMPORTANT]
+> Homebrew refuses to load casks from a third-party tap until you trust it.
+> If you skip `brew trust`, the install fails with:
+>
+> ```text
+> Error: Refusing to load cask charliie-dev/tap/airbattery from untrusted tap charliie-dev/tap.
+> ```
+>
+> Run `brew trust charliie-dev/tap` to trust the whole tap, or
+> `brew trust --cask charliie-dev/tap/airbattery` to trust a single cask.
 
 ## Available Casks
 
