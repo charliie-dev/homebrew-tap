@@ -26,6 +26,7 @@ brew install --cask airbattery
 | Cask | Description | Upstream |
 | --- | --- | --- |
 | `airbattery` | Display the battery levels of your devices on your Mac | [lihaoyun6/AirBattery](https://github.com/lihaoyun6/AirBattery) |
+| `pear-desktop` | YouTube Music desktop app with custom plugins | [pear-devs/pear-desktop](https://github.com/pear-devs/pear-desktop) |
 
 > [!NOTE]
 > AirBattery's current release is signed with an Apple Development certificate
