@@ -34,3 +34,11 @@ jobs:
           brew test-bot --only-cleanup-before
           brew test-bot --only-tap-syntax
           brew test-bot --only-formulae
+
+      # test-bot does not audit casks; this mirrors the strict audit that
+      # `brew bump-cask-pr` runs, including the artifact minimum-macOS check.
+      - name: Audit casks
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAP: ${{ github.repository }}
+        run: brew audit --strict --online --arch=all --tap "$TAP"
